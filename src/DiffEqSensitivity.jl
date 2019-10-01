@@ -4,7 +4,7 @@ module DiffEqSensitivity
 
 using DiffEqBase, ForwardDiff, Tracker, DiffEqDiffTools, Statistics
 using DiffEqCallbacks, QuadGK, RecursiveArrayTools, LinearAlgebra
-using DataFrames, GLM
+using DataFrames, GLM, FFTW, Distributions
 using Parameters: @unpack
 
 
@@ -25,7 +25,7 @@ export extract_local_sensitivities
 export ODELocalSensitivityFunction, ODELocalSensitivityProblem, SensitivityFunction,
        ODEAdjointSensitivityProblem, ODEAdjointProblem, AdjointSensitivityIntegrand,
        adjoint_sensitivities, adjoint_sensitivities_u0, Sobol, Morris, gsa,
-       SensitivityAlg, regression_sensitivity, DGSM, fast
+       SensitivityAlg, regression_sensitivity, DGSM, eFAST
 
 
 end # module
